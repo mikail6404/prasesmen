@@ -65,6 +65,13 @@ c. 1 tombol
                 alert('Jumlah buku tidak boleh kosong.');
                 return false;
             }
+            
+            let bookFound = false;
+            let availableBooks = buku.filter(book => book.nama === selectedBook);
+            if (availableBooks.length === 0) {
+                alert('Buku tidak ditemukan.');
+                return false;
+            }
         }
     
 </script>
